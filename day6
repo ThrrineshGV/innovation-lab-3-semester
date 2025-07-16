@@ -1,0 +1,23 @@
+const name= "thrinnesh";
+var city="cbe";
+let thi="thrina";
+console.log("NAME:"+name+" "+thr);
+console.log("City: "+city);
+document.write(name+" ");
+document.write(thr+" ");
+document.write(city);
+
+//task 2
+console.log("Name: "+typeof(name));
+console.log("thr: "+typeof(thi));
+console.log("city: "+typeof(city));
+
+//task 3
+let a=3;
+let b=7;
+let c=a + b;
+alert(a+b);
+console.log( "Add:"+c);
+console.log( "Sub:"+(c-a));
+console.log( "Multipy:"+(a*b));
+console.log( "Divide:"+(b/c));
