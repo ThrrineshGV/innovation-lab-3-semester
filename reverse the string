@@ -1,0 +1,24 @@
+<html>
+<body>
+  <h3>1. Reverse Words</h3>
+  <input id="s" placeholder="Type a sentence"><br>
+  <button onclick="r()">Reverse</button><br>
+  <p id="o1"></p>
+
+  <h3>2. Remove Duplicates</h3>
+  <input id="a" placeholder="e.g. 1,2,2,3"><br>
+  <button onclick="d()">Remove</button><br>
+  <p id="o2"></p>
+
+  <h3>3. Count Vowels</h3>
+  <input id="v" placeholder="Type text"><br>
+  <button onclick="c()">Count</button><br>
+  <p id="o3"></p>
+
+  <script>
+    const r = () => o1.textContent = s.value.split(' ').map(w => [...w].reverse().join('')).join(' ');
+    const d = () => o2.textContent = [...new Set(a.value.split(',').map(Number))].join(',');
+    const c = () => o3.textContent = (v.value.match(/[aeiou]/gi)||[]).length + ' vowels';
+  </script>
+</body>
+</html>
