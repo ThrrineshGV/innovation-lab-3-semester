@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+</head>
+<body>
+  <textarea id="inputvalue" cols="30" rows="5" placeholder="Enter your task..."></textarea>
+  <br>
+  <button onclick="todolistCount()">Add Task</button>
+
+  <ul id="listcontent"></ul>
+
+  <script>
+    function todolistCount() {
+      let textvalue = document.getElementById("inputvalue").value.trim();
+      if (textvalue === "") return;
+
+      let li = document.createElement("li");
+      li.textContent = textvalue;
+
+      document.getElementById("listcontent").appendChild(li);
+      document.getElementById("inputvalue").value = "";
+      let removeBtn=document.createElement("button")
+      removeBtn.textContent="remove";
+      removeBtn.addEventListener("click",function(e){
+        li.remove();
+      })
+      li.appendChild(removeBtn);
+      }
+  </script>
+</body>
+</html>
